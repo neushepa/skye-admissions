@@ -31,13 +31,34 @@
     <!-- Template Main CSS File -->
     <link href="../front/css/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Nova
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    {{-- Fontawesome Icons --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+
+    {{-- Dselect Dropdown --}}
+    <link rel="stylesheet" href="https://unpkg.com/@jarstone/dselect/dist/css/dselect.css" crossorigin="anonymous">
+
+    {{-- Styling --}}
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number]{
+            -moz-appearance: textfield;
+        }
+    </style>
+
+    <!--
+        =======================================================
+        * Template Name: Nova
+        * Updated: Sep 18 2023 with Bootstrap v5.3.2
+        * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ========================================================
+    -->
 </head>
 
 <body class="page-index">
@@ -59,6 +80,15 @@
 
     <!-- Template Main JS File -->
     <script src="../front/js/main.js"></script>
+
+    {{-- Dselect Js --}}
+    <script src="https://unpkg.com/@jarstone/dselect/dist/js/dselect.js"></script>
+
+    {{-- Jquery CDN --}}
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    {{-- JQUERY specific --}}
+    @yield('script')
 
 </body>
 
