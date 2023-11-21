@@ -613,6 +613,216 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Hero B Section
+--------------------------------------------------------------*/
+.hero-b {
+  width: 100%;
+  min-height: 50vh;
+  background: url("../img/skye-bg.jpg");
+  background-position: 0px -100px;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0;
+  z-index: 3;
+}
+
+.hero-b:before {
+  position: absolute;
+  content: "";
+  background: rgba(27, 47, 69, 0.6);
+  inset: 0;
+}
+
+@media (max-width: 1034px) {
+  .hero-b:before {
+    background: rgba(27, 47, 69, 0.7);
+  }
+}
+
+.hero-b .container {
+  z-index: 1;
+}
+
+@media (min-width: 1365px) {
+  .hero-b {
+    background-attachment: fixed;
+  }
+}
+
+.hero-b h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  font-family: var(--font-secondary);
+}
+
+.hero-b blockquote {
+  color: #fff;
+  padding-left: 20px;
+  font-size: 15px;
+  font-family: var(--font-default);
+  border-left: 2px solid var(--color-primary);
+  margin: 40px 0;
+}
+
+.hero-b .btn-get-started {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.hero-b .btn-get-started:hover {
+  background: #ffffff;
+  color:#565656
+}
+
+.hero-b .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.hero-b .btn-watch-video i {
+  color: var(--color-primary);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero-b .btn-watch-video:hover {
+  color: #fff;
+}
+
+.hero-b .btn-watch-video:hover i {
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .hero-b h2 {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .hero-b .btn-get-started,
+  .hero-b .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+.breadcrumb-hero {
+    text-decoration: none;
+    color: cyan;
+}
+
+.breadcrumb-hero:hover {
+    color: white;
+    transition: 0.3s
+}
+
+/*--------------------------------------------------------------
+# Timeline
+--------------------------------------------------------------*/
+
+
+@media (max-width: 1200px) {
+    .timeline-section {
+        display: none;
+        background-color: blue
+    }
+}
+
+@media (min-width: 1200px) {
+    .timeline-steps {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+
+    .timeline-steps .timeline-step {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 1rem
+    }
+
+    .timeline-steps .timeline-content {
+        width: 10rem;
+        text-align: center
+    }
+
+    .timeline-steps .timeline-content .inner-circle {
+        border-radius: 1.5rem;
+        height: 1rem;
+        width: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(27, 47, 69, 0.9)
+    }
+
+    .timeline-steps .timeline-content .inner-circle:before {
+        content: "";
+        background-color: rgba(27, 47, 69, 0.9);
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
+        min-width: 3rem;
+        border-radius: 6.25rem;
+        opacity: .5
+    }
+
+    .icon-circle {
+        background-color: grey;
+        border-radius: 50%;
+        padding: 20px;
+        margin-top: -50px;
+        color: white;
+    }
+
+    .icon-active {
+        background-color: rgba(27, 47, 69, 0.9);
+        border-radius: 50%;
+        padding: 20px;
+        margin-top: -50px;
+    }
+
+}
+
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted rgba(27, 47, 69, 0.9);
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted rgba(27, 47, 69, 0.9);
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
+}
+
+/*--------------------------------------------------------------
 # Why Choose Us Section
 --------------------------------------------------------------*/
 .why-us {
