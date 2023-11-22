@@ -20,7 +20,7 @@
                 {{-- Timeline : End --}}
 
                 {{-- Form : Start --}}
-                <div class="mt-5 card shadow-sm border-0 border-3 border-top border-primary" data-aos="fade-up">
+                <div class="mt-5 card shadow-sm border-0 border-5 border-top" style="border-top-color: rgba(44, 44, 44, 1);" data-aos="fade-up">
                     @include('components.form.form')
                 </div>
                 {{-- Form : End --}}
@@ -110,12 +110,134 @@
     {{-- Script : Start --}}
     @section('script')
         <script>
+            // dselect
+            dselect(document.querySelector('#dselect-example'))
+            dselect(document.querySelector('#kabupaten'))
+            dselect(document.querySelector('#provinsi'))
+            dselect(document.querySelector('#kecamatan'))
+            dselect(document.querySelector('#desa'))
+            dselect(document.querySelector('#kabupaten-2'))
+            dselect(document.querySelector('#provinsi-2'))
+            dselect(document.querySelector('#kecamatan-2'))
+            dselect(document.querySelector('#desa-2'))
+            dselect(document.querySelector('#kebutuhan-khusus-dropdown'))
+            dselect(document.querySelector('#asal-sekolah'))
+            dselect(document.querySelector('#pendidikan-ayah'))
+            dselect(document.querySelector('#pendidikan-ibu'))
+            dselect(document.querySelector('#pendidikan-wali'))
+
             $(document).ready(function () {
-                dselect(document.querySelector('#dselect-example'))
-                dselect(document.querySelector('#kabupaten'))
-                dselect(document.querySelector('#provinsi'))
-                dselect(document.querySelector('#kecamatan'))
-                dselect(document.querySelector('#desa'))
+
+                // Form Identitas Siswa
+                $('#identitasSiswa').on('click', function() {
+                    $('#icon-asal-sekolah').addClass('icon-active')
+                    $('#form-identitas-siswa').slideUp('slow')
+                    $('#form-asal-sekolah').slideDown('slow')
+                })
+
+                // Form Asal Sekolah
+                $('#prevAsalSekolah').on('click', function() {
+                    $('#icon-asal-sekolah').removeClass('icon-active')
+                    $('#form-asal-sekolah').slideUp('slow')
+                    $('#form-identitas-siswa').slideDown('slow')
+                })
+
+                $('#nextAsalSekolah').on('click', function() {
+                    $('#icon-orang-tua').addClass('icon-active')
+                    $('#form-asal-sekolah').slideUp('slow')
+                    $('#form-orang-tua').slideDown('slow')
+                })
+
+                // Form Orang Tua
+                $('#prevOrangTua').on('click', function() {
+                    $('#icon-orang-tua').removeClass('icon-active')
+                    $('#form-orang-tua').slideUp('slow')
+                    $('#form-asal-sekolah').slideDown('slow')
+                })
+
+                $('#nextOrangTua').on('click', function() {
+                    $('#icon-data-periodik').addClass('icon-active')
+                    $('#form-orang-tua').slideUp('slow')
+                    $('#form-data-periodik').slideDown('slow')
+                })
+
+                // Form Data Periodik
+                $('#prevDataPeriodik').on('click', function() {
+                    $('#icon-data-periodik').removeClass('icon-active')
+                    $('#form-data-periodik').slideUp('slow')
+                    $('#form-orang-tua').slideDown('slow')
+                })
+
+                $('#nextDataPeriodik').on('click', function() {
+                    $('#icon-selesai').addClass('icon-active')
+                    $('#form-data-periodik').slideUp('slow')
+                    $('#form-selesai').slideDown('slow')
+                })
+
+                // Form Data Periodik
+                $('#prevSelesai').on('click', function() {
+                    $('#icon-selesai').removeClass('icon-active')
+                    $('#form-selesai').slideUp('slow')
+                    $('#form-data-periodik').slideDown('slow')
+                })
+
+                // Kebutuhan Khusus Radio Event
+                $("#kebutuhan-khusus-ya").change(function (e) {
+                    e.preventDefault();
+                    if ($('#kebutuhan-khusus-ya').is(':checked')) {
+                        $('#dropdown-kebutuhan-khusus').css('display', '')
+                    }
+                });
+
+                $("#kebutuhan-khusus-tidak").change(function (e) {
+                    e.preventDefault();
+                    if ($('#kebutuhan-khusus-tidak').is(':checked')) {
+                        $('#dropdown-kebutuhan-khusus').css('display', 'none')
+                    }
+                });
+
+                // Status Ortu Radio Event
+                $("#status-ortu-kandung").change(function (e) {
+                    e.preventDefault();
+                    if ($('#status-ortu-kandung').is(':checked')) {
+                        $('#ortu-kandung-section').css('display', '')
+                        $('#ortu-wali-section').css('display', 'none')
+                    }
+                });
+
+                $("#status-ortu-wali").change(function (e) {
+                    e.preventDefault();
+                    if ($('#status-ortu-wali').is(':checked')) {
+                        $('#ortu-wali-section').css('display', '')
+                        $('#ortu-kandung-section').css('display', 'none')
+                    }
+                });
+
+                // Status Ortu Radio Event
+                $("#jarak-dekat").change(function (e) {
+                    e.preventDefault();
+                    if ($('#jarak-dekat').is(':checked')) {
+                        $('#input-jarak').css('display', 'none')
+                    }
+                });
+
+                $("#jarak-jauh").change(function (e) {
+                    e.preventDefault();
+                    if ($('#jarak-jauh').is(':checked')) {
+                        $('#input-jarak').css('display', '')
+                    }
+                });
+
+                // Checkbox persetujuan
+                $('#persetujuan').change(function (e) {
+                    e.preventDefault();
+                    if ($('#persetujuan').is(':checked')) {
+                        $('#submit-button').attr('disabled', false);
+                    } else {
+                        $('#submit-button').attr('disabled', true);
+                    }
+                });
+
             })
         </script>
     @endsection

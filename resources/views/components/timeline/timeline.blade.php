@@ -19,25 +19,25 @@
                 </div>
                 <div class="timeline-step">
                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
-                        <i class="fa-solid fa-graduation-cap icon-circle"></i>
+                        <i class="fa-solid fa-graduation-cap icon-circle" id="icon-asal-sekolah"></i>
                         <p class="h6 text-muted mb-0 mb-lg-0 mt-3">Asal Sekolah</p>
                     </div>
                 </div>
                 <div class="timeline-step">
                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
-                        <i class="fa-solid fa-user-group icon-circle" ></i>
+                        <i class="fa-solid fa-user-group icon-circle" id="icon-orang-tua"></i>
                         <p class="h6 text-muted mb-0 mb-lg-0 mt-3">Orang Tua</p>
                     </div>
                 </div>
                 <div class="timeline-step">
                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
-                        <i class="fa-solid fa-file-lines icon-circle" ></i>
+                        <i class="fa-solid fa-file-lines icon-circle" id="icon-data-periodik"></i>
                         <p class="h6 text-muted mb-0 mb-lg-0 mt-3">Data Periodik</p>
                     </div>
                 </div>
                 <div class="timeline-step mb-0">
                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                        <i class="fa-solid fa-check icon-circle" ></i>
+                        <i class="fa-solid fa-check icon-circle" id="icon-selesai"></i>
                         <p class="h6 text-muted mb-0 mb-lg-0 mt-3">Selesai</p>
                     </div>
                 </div>
